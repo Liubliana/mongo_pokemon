@@ -515,36 +515,42 @@ db.Trainers.insertMany([
         pokedex: [
             {
                 id: 2,
+                id_pokedex: 1,
                 pokeball: "Normal",
                 gender: "female",
                 route: 22
             },
             {
                 id: 5,
+                id_pokedex: 2,
                 pokeball: "Normal",
                 gender: "male",
                 route: 44
             },
             {
                 id: 12,
+                id_pokedex: 3,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 25
             },
             {
                 id: 12,
+                id_pokedex: 4,
                 pokeball: "Normal",
                 gender: "female",
                 route: 38
             },
             {
                 id: 12,
+                id_pokedex: 5,
                 pokeball: "Masterball",
                 gender: "male",
                 route: 38
             },
             {
                 id: 19,
+                id_pokedex: 6,
                 pokeball: "Normal",
                 gender: "male",
                 route: 34
@@ -555,28 +561,32 @@ db.Trainers.insertMany([
         _id: 2,
         name: "Falkner",
         age: 12,
-        trainer_class: ["Gym_leadear", "Ultra_Class"],
+        trainer_class: ["Ultra_Class"],
         pokedex: [
             {
                 id: 1,
+                id_pokedex: 1,
                 pokeball: "Normal",
                 gender: "female",
                 route: 2
             },
             {
                 id: 2,
+                id_pokedex: 2,
                 pokeball: "Normal",
                 gender: "female",
                 route: 22
             },
             {
                 id: 4,
+                id_pokedex: 3,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 25
             },
             {
                 id: 16,
+                id_pokedex: 4,
                 pokeball: "Ultraball",
                 gender: "female",
                 route: 3
@@ -592,28 +602,32 @@ db.Trainers.insertMany([
         _id: 3,
         name: "Lt. Surge Visquez",
         age: 22,
-        trainer_class: ["Gym_leadear", "Ultra_Class"],
+        trainer_class: ["Great_Class"],
         pokedex: [
             {
                 id: 6,
+                id_pokedex: 1,
                 pokeball: "Normal",
                 gender: "male",
                 route: 15
             },
             {
                 id: 14,
+                id_pokedex: 2,
                 pokeball: "Normal",
                 gender: "female",
                 route: 16
             },
             {
                 id: 20,
+                id_pokedex: 3,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 112
             },
             {
                 id: 18,
+                id_pokedex: 4,
                 pokeball: "Ultraball",
                 gender: "female",
                 route: 41
@@ -629,40 +643,46 @@ db.Trainers.insertMany([
         _id: 4,
         name: "Pryce",
         age: 42,
-        trainer_class: ["Gym_leadear", "Ultra_Class"],
+        trainer_class: ["Ultra_Class"],
         pokedex: [
             {
                 id: 7,
+                id_pokedex: 1,
                 pokeball: "Normal",
                 gender: "male",
                 route: 36
             },
             {
                 id: 8,
+                id_pokedex: 2,
                 pokeball: "Normal",
                 gender: "female",
                 route: 16
             },
             {
                 id: 9,
+                id_pokedex: 3,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 59
             },
             {
                 id: 10,
+                id_pokedex: 4,
                 pokeball: "Normal",
                 gender: "female",
                 route: 6
             },
             {
                 id: 9,
+                id_pokedex: 5,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 57
             },
             {
                 id: 10,
+                id_pokedex: 6,
                 pokeball: "Greatball",
                 gender: "male",
                 route: 7
@@ -677,16 +697,18 @@ db.Trainers.insertMany([
         _id: 5,
         name: "Viola",
         age: 15,
-        trainer_class: ["Gym_leadear", "Great_Class"],
+        trainer_class: ["Great_Class"],
         pokedex: [
             {
                 id: 9,
+                id_pokedex: 1,
                 pokeball: "Normal",
                 gender: "male",
                 route: 57
             },
             {
                 id: 10,
+                id_pokedex: 2,
                 pokeball: "Normal",
                 gender: "male",
                 route: 7
@@ -704,25 +726,29 @@ db.Trainers.insertMany([
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                id: 19,
+                _id: 1,
+                pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
                 region: 34
             },
             {
-                id: 19,
+                _id: 2,
+                pokemon_id: 19,
                 pokeball: "Greatball",
                 gender: "male",
                 region: 34
             },
             {
-                id: 19,
+                _id: 3,
+                pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
                 region: 41
             },
             {
-                id: 19,
+                _id: 4,
+                pokemon_id: 19,
                 pokeball: "Ultraball",
                 gender: "female",
                 region: 41
@@ -737,7 +763,8 @@ db.Trainers.insertMany([
         trainer_class: ["Master_Class"],
         pokedex: [
             {
-                id: 15,
+                _id: 1,
+                pokemon_id: 15,
                 pokeball: "Masterball",
                 gender: "male",
                 route: 1
@@ -751,19 +778,22 @@ db.Trainers.insertMany([
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                id: 14,
+                _id: 1,
+                pokemon_id: 14,
                 pokeball: "Normal",
                 gender: "male",
                 route: 16
             },
             {
-                id: 13,
+                _id: 2,
+                pokemon_id: 13,
                 pokeball: "Normal",
                 gender: "male",
                 route: 2
             },
             {
-                id: 12,
+                _id: 3,
+                pokemon_id: 12,
                 pokeball: "Normal",
                 gender: "female",
                 route: 3
@@ -778,25 +808,29 @@ db.Trainers.insertMany([
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                id: 3,
+                _id: 1,
+                pokemon_id: 3,
                 pokeball: "Normal",
                 gender: "male",
                 route: 22
             },
             {
-                id: 7,
+                _id: 2,
+                pokemon_id: 7,
                 pokeball: "Normal",
                 gender: "female",
                 route: 5
             },
             {
-                id: 19,
+                _id: 3,
+                pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
                 route: 41
             },
             {
-                id: 5,
+                _id: 4,
+                pokemon_id: 5,
                 pokeball: "Normal",
                 gender: "female",
                 route: 44
@@ -810,25 +844,29 @@ db.Trainers.insertMany([
         trainer_class: ["Master_Class"],
         pokedex: [
             {
-                id: 14,
+                _id: 1,
+                pokemon_id: 14,
                 pokeball: "Normal",
                 gender: "male",
                 route: 16
             },
             {
-                id: 13,
+                _id: 2,
+                pokemon_id: 13,
                 pokeball: "Normal",
                 gender: "male",
                 route: 2
             },
             {
-                id: 12,
+                _id: 3,
+                pokemon_id: 12,
                 pokeball: "Normal",
                 gender: "female",
                 route: 3
             },
             {
-                id: 17,
+                _id: 4,
+                pokemon_id: 17,
                 pokeball: "Ultraball",
                 gender: "female",
                 route: 0
