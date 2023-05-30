@@ -103,7 +103,10 @@ db.createCollection('Trainers', {
                         bsonType: "object",
                         required: ["id", "pokeball", "gender", "route"],
                         properties: {
-                            id: {
+                            pokemon_id: {
+                                bsonType: "int"
+                            },
+                            _id: {
                                 bsonType: "int"
                             },
                             pokeball: {
