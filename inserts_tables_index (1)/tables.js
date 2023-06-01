@@ -4,9 +4,6 @@ use pokemon_project
 
 // Create pokemon collection
 db.createCollection('Pokemons', {
-    capped: true,
-    max: 20,
-    size: 1000,
     validator: {
         $jsonSchema: {
             bsonType: "object",
@@ -70,9 +67,6 @@ db.createCollection('Pokemons', {
 
 // Create trainers
 db.createCollection('Trainers', {
-    capped: true,
-    max: 20,
-    size: 1000,
     validator: {
         $jsonSchema: {
           bsonType: "object",

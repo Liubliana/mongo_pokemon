@@ -3,50 +3,47 @@ db.Pokemons.find()
 db.Trainers.find()
 
 // 02.Quantidade total de documentos
-db.Pokemons.count()
-db.Trainers.count()
-db.Regions.count()
-db.Gymnasium.count()
+db.Pokemons.countDocuments()
+db.Trainers.countDocuments()
+db.Regions.countDocuments()
+db.Gymnasium.countDocuments()
 
 // 03. Ordenados
 db.Gymnasium.find().sort({name: 1}) // ginasios por nome
 db.Regions.find({}, {name: 1}).sort({name: 1}) // regioes por nome
-db.Pokemons.find({}, {name: 1}).sort({attack: -1}) //pokemons por ataque --> TREINADORES
-//
+db.Pokemons.find({}, {name: 1, attack: 1}).sort({attack: -1}).limit(5) //top 5 pokemons
 
 // 04. Or
-db.Pokemons.find({$or: [{legendary: true}, {attack: {$gt: 60}}]}) // como ordenar
-db.Trainers.find({$or: [{trainer_class: {$in: ["Master_Class", "Ultra_Class"]}}, {gymnasium: { $exists: true }}]})
+db.Pokemons.find({$or: [{legendary: true}, {attack: {$gt: 60}}]}, {_id: 0, name: 1, attack: 1, legendary: 1}) // como ordenar
+db.Trainers.find({$or: [{trainer_class: {$in: ["Master_Class", "Ultra_Class"]}}, {gymnasium: { $exists: true }}]}, {name: 1})
+db.Pokemons.find({$or: [{"special_powers.Razor_Leaf": {$exists: true}}, {"special_powers.Tackle": {$exists: true}}]}, {name: 1, special_powers: 1})
 
 // 05. Minor than
-db.Pokemons.find({speed: {$lt: 40}})
+db.Pokemons.find({speed: {$lt: 40}}, {name: 1, speed: 1})
 db.Pokemons.count({speed: {$lt: 40}})
 
 // 06. AND
-db.poke.find({$and: [{hp: {$gt: 40}}, {hp: {$lt: 60}}]})
-db.poke.count({$and: [{hp: {$gt: 40}}, {hp: {$lt: 60}}]})
+db.Pokemons.find({$and: [{hp: {$gt: 40}}, {hp: {$lt: 60}}]})
+db.Pokemons.count({$and: [{hp: {$gt: 40}}, {hp: {$lt: 60}}]})
 
-// 08.Retorne o id e os nomes dos pokémons que forem do tipo Fire OU Normal
-db.poke.find({types: {$in: ["Normal", "Fire"]}}, {name: 1})
+// 07. Índice + In
+db.Pokemons.find({types: {$in: ["Normal", "Fire"]}}, {name: 1, types: 1}).hint({types:1})
 
-// 09.Retorne os nomes dos pokémons que forem do tipo Bug E Poison
-db.poke.find({types: {$all: ["Bug", "Poison"]}}, {_id: 0, name: 1})
+// 08. ALL
+db.Pokemons.find({types: {$all: ["Grass", "Poison"]}}, {_id: 0, name: 1, types: 1}).hint({types:1})
 
-// 10.Retorne os pokémons que em seu nome tenham “pi”
-db.poke.find({$or: [{name: /pi/}, {name:/Pi/}]}, {_id: 0, name: 1})
-db.poke.find({name: /pi/i}, {_id: 0, name: 1})
+// 9. Procura String
+db.Pokemons.find({name: /saur/}, {_id: 0, name: 1})
+db.Gymnasium.find({"champions.type" : "Ice"}, {name: 1, champions:1})
 
-// 11. Retorne os pokémons em que seu nome termine com letra “r”
-db.poke.find({name: /r$/i}, {_id: 0, name: 1})
-
-// 12.Faça uma consulta que limite o resultado em um retorno para apenas 5 documentos
-db.poke.find({}, {name: 1}).sort({name: 1}).limit(5)
-
-// 13.Retorne os pokémons que sejam de apenas um tipo
-db.poke.find({types : {$size:1}}, {name: 1, types: 1})
+// 10. Size
+db.Gymnasium.find({champions : {$size:1}}, {name: 1, champions:1})
+db.Regions.find({pokemon : {$size:2}}, {name: 1})
+db.Regions.find({gymnasiums : {$size:2}}, {name: 1})
+db.Regions.find({gymnasiums : {$exists: false}}, {name: 1})
 
 // Updates
-db.poke.updateOne({_id: 1}, {$set: {attack: 50}})
+db.Trainers.updateOne({_id: 1}, {$set: {attack: 50}})
 
 db.poke.updateMany({name: {$in: ['Bulbasaur', 'Charmander', 'Squirtle']}}, {$set: {inicial: true}})
 fb.poke.find({inicial: true})

@@ -357,8 +357,7 @@ db.Pokemons.insertMany([
         speed: 55,
         generation: 1,
         special_powers: {
-            Razor_Leaf: 55,
-            Magic_Leaf: 60
+            Confusion: 80,
         },
         regions: [
             {
@@ -382,7 +381,7 @@ db.Pokemons.insertMany([
         speed: 130,
         generation: 1, 
         special_powers: {
-            Confusion: 50,
+            Confusion: 55,
             Psystrike: 100
         },
         regions: [
@@ -411,7 +410,7 @@ db.Pokemons.insertMany([
         generation: 4,
         special_powers: {
             Confusion: 50,
-            Psystrike: 100
+            Razor_Wind: 100
         },
         regions: [
             {
@@ -503,7 +502,6 @@ db.Pokemons.insertMany([
         ]
     }
 ])
-
 
 // Insert trainers
 db.Trainers.insertMany([
@@ -953,12 +951,6 @@ db.Regions.insertMany([
     {
         _id: 3,
         name: "Alola",
-        gymnasiums: [
-            {
-                id: 4,
-                city: "Santalune City"
-            }
-        ],
         pokemon: [
             {
                 id: 19,
