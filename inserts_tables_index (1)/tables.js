@@ -48,9 +48,6 @@ db.createCollection('Pokemons', {
                         bsonType: "int"
                     }
                 },
-                professor: {
-                    bsonType: "int",
-                },
                 regions: {
                     bsonType: "array",
                     items: {
@@ -103,10 +100,10 @@ db.createCollection('Trainers', {
                         bsonType: "object",
                         required: ["id", "pokeball", "gender", "route"],
                         properties: {
-                            pokemon_id: {
+                            id: {
                                 bsonType: "int"
                             },
-                            _id: {
+                            id_pokedex: {
                                 bsonType: "int"
                             },
                             pokeball: {
@@ -121,6 +118,9 @@ db.createCollection('Trainers', {
                             }
                         }
                     }
+                },
+                professor: {
+                    bsonType: "int",
                 },
                 gymnasium: {
                     bsonType: "object",

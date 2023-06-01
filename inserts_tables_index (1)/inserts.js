@@ -601,7 +601,7 @@ db.Trainers.insertMany([
     {
         _id: 3,
         name: "Lt. Surge Visquez",
-        age: 22,
+        age: 25,
         trainer_class: ["Great_Class"],
         pokedex: [
             {
@@ -688,6 +688,7 @@ db.Trainers.insertMany([
                 route: 7
             }
         ],
+        professor: 10,
         gymnasium: {
             id: 3,
             type: "Ice",
@@ -696,7 +697,7 @@ db.Trainers.insertMany([
     {
         _id: 5,
         name: "Viola",
-        age: 15,
+        age: 16,
         trainer_class: ["Great_Class"],
         pokedex: [
             {
@@ -722,36 +723,36 @@ db.Trainers.insertMany([
     {
         _id: 6,
         name: "Hilda",
-        age: 14,
+        age: 22,
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                _id: 1,
+                id: 1,
                 pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
-                region: 34
+                route: 34
             },
             {
-                _id: 2,
+                id: 2,
                 pokemon_id: 19,
                 pokeball: "Greatball",
                 gender: "male",
-                region: 34
+                route: 34
             },
             {
-                _id: 3,
+                id: 3,
                 pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
-                region: 41
+                route: 41
             },
             {
-                _id: 4,
+                id: 4,
                 pokemon_id: 19,
                 pokeball: "Ultraball",
                 gender: "female",
-                region: 41
+                route: 41
             }
         ],
         professor: 10
@@ -759,11 +760,11 @@ db.Trainers.insertMany([
     {
         _id: 7,
         name: "Mestre Waldo",
-        age: 14,
+        age: 52,
         trainer_class: ["Master_Class"],
         pokedex: [
             {
-                _id: 1,
+                id: 1,
                 pokemon_id: 15,
                 pokeball: "Masterball",
                 gender: "male",
@@ -774,25 +775,25 @@ db.Trainers.insertMany([
     {
         _id: 8,
         name: "Misty",
-        age: 14,
+        age: 15,
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                _id: 1,
+                id: 1,
                 pokemon_id: 14,
                 pokeball: "Normal",
                 gender: "male",
                 route: 16
             },
             {
-                _id: 2,
+                id: 2,
                 pokemon_id: 13,
                 pokeball: "Normal",
                 gender: "male",
                 route: 2
             },
             {
-                _id: 3,
+                id: 3,
                 pokemon_id: 12,
                 pokeball: "Normal",
                 gender: "female",
@@ -804,32 +805,32 @@ db.Trainers.insertMany([
     {
         _id: 9,
         name: "Johnny",
-        age: 14,
+        age: 13,
         trainer_class: ["Normal_Class"],
         pokedex: [
             {
-                _id: 1,
+                id: 1,
                 pokemon_id: 3,
                 pokeball: "Normal",
                 gender: "male",
                 route: 22
             },
             {
-                _id: 2,
+                id: 2,
                 pokemon_id: 7,
                 pokeball: "Normal",
                 gender: "female",
                 route: 5
             },
             {
-                _id: 3,
+                id: 3,
                 pokemon_id: 19,
                 pokeball: "Normal",
                 gender: "female",
                 route: 41
             },
             {
-                _id: 4,
+                id: 4,
                 pokemon_id: 5,
                 pokeball: "Normal",
                 gender: "female",
@@ -840,32 +841,32 @@ db.Trainers.insertMany([
     {
         _id: 10,
         name: "Irina",
-        age: 14,
+        age: 19,
         trainer_class: ["Master_Class"],
         pokedex: [
             {
-                _id: 1,
+                id: 1,
                 pokemon_id: 14,
                 pokeball: "Normal",
                 gender: "male",
                 route: 16
             },
             {
-                _id: 2,
+                id: 2,
                 pokemon_id: 13,
                 pokeball: "Normal",
                 gender: "male",
                 route: 2
             },
             {
-                _id: 3,
+                id: 3,
                 pokemon_id: 12,
                 pokeball: "Normal",
                 gender: "female",
                 route: 3
             },
             {
-                _id: 4,
+                id: 4,
                 pokemon_id: 17,
                 pokeball: "Ultraball",
                 gender: "female",
