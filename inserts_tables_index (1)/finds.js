@@ -33,11 +33,14 @@ db.Pokemons.find({types: {$in: ["Normal", "Fire"]}}, {name: 1, types: 1}).hint({
 db.Pokemons.find({types: {$all: ["Grass", "Poison"]}}, {_id: 0, name: 1, types: 1}).hint({types:1})
 
 // 9. Procura String
-db.Pokemons.find({name: /saur/}, {_id: 0, name: 1})
+db.Pokemons.find({name: /saur/}, {_id: 0, name: 1}).hint({name: 1})
 db.Gymnasium.find({"champions.type" : "Ice"}, {name: 1, champions:1})
 
 // 10. Size
-db.Gymnasium.find({champions : {$size:1}}, {name: 1, champions:1})
-db.Regions.find({pokemon : {$size:2}}, {name: 1})
-db.Regions.find({gymnasiums : {$size:2}}, {name: 1})
+db.Gymnasium.find({champions : {$size: 1}}, {name: 1, champions: 1})
+db.Regions.find({pokemon : {$size: 2}}, {name: 1})
+db.Regions.find({gymnasiums : {$size: 2}}, {name: 1})
 db.Regions.find({gymnasiums : {$exists: false}}, {name: 1})
+
+// 11. Expr
+db.Trainers.find({$expr: {$gt: [{$size: "$pokedex"}, 3]}}, {name: 1})
