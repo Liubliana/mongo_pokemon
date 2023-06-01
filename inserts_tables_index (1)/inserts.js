@@ -768,7 +768,11 @@ db.Trainers.insertMany([
                 gender: "male",
                 route: 1
             }
-        ]
+        ],
+        gymnasium: {
+            id: 8,
+            type: "Psychic"
+        }
     },
     {
         _id: 8,
@@ -798,7 +802,11 @@ db.Trainers.insertMany([
                 route: 3
             }
         ],
-        professor: 10
+        professor: 10,
+        gymnasium: {
+            id: 6,
+            type: "Psychic"
+        }
     },
     {
         _id: 9,
@@ -870,7 +878,11 @@ db.Trainers.insertMany([
                 gender: "female",
                 route: 0
             }
-        ]
+        ],
+        gymnasium: {
+            id: 6,
+            type: "Ghost"
+        }
     }
 ])
 

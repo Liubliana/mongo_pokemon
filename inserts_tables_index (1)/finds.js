@@ -41,19 +41,3 @@ db.Gymnasium.find({champions : {$size:1}}, {name: 1, champions:1})
 db.Regions.find({pokemon : {$size:2}}, {name: 1})
 db.Regions.find({gymnasiums : {$size:2}}, {name: 1})
 db.Regions.find({gymnasiums : {$exists: false}}, {name: 1})
-
-// Updates
-db.Trainers.updateOne({_id: 1}, {$set: {attack: 50}})
-
-db.poke.updateMany({name: {$in: ['Bulbasaur', 'Charmander', 'Squirtle']}}, {$set: {inicial: true}})
-fb.poke.find({inicial: true})
-
-db.poke.updateMany({name: {$in: ['Bulbasaur', 'Charmander', 'Squirtle']}}, {$unset: {inicial: true}})
-
-db.poke.updateMany({speed: {$gt: 60}}, {$inc: {defense: 2} })
-
-db.poke.updateOne({name: "Eevee"}, {$set: {attack: 55}, $setOnInsert: {types: ['Fire']}}, {upsert:true})
-
-db.poke.updateOne({name: "Eevee" , types: "Fire"}, {$set: {"types.$": "Normal"}})
-
-db.poke.updateOne({name: "Eevee"}, {$push: {types: {$each: ["Fire", "Fairy", "Electric", "Dark", "Water", "Ice", "Grass"]}}})
